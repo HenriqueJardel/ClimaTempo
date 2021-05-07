@@ -7,6 +7,7 @@ import { HeaderComponent } from './views/header/header.component';
 import { CardComponent } from './views/card/card.component';
 import { ClimaService } from './services/clima.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [ClimaService],
   bootstrap: [AppComponent]
