@@ -1,1 +1,7 @@
-<p>header works!</p>
+<form>
+    <input placeholder="Procure pela cidade" [formControl]="queryField" list="datalistOptions" type="search">
+    <datalist id="datalistOptions">
+        <option *ngFor="let sugestao of sugestoes">{{sugestao}}</option>
+    </datalist>
+    <button (click)="search()"></button>
+</form>

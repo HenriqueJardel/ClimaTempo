@@ -1,7 +1,14 @@
 <!--Teste de dados-->
-<p>Cidade: {{cidade}}</p>
-<p>Temperatura Atual: {{temperatura?.temp}}</p>
-<p>Temperatura Minima: {{temperatura?.temp_min}}</p>
-<p>Temperatura Maxima: {{temperatura?.temp_max}}</p>
-<p>Humidade Atual: {{temperatura?.humidity}}%</p>
-<p>Tempo: {{tempo?.description}}</p>
+<!--Somente teste podem ser apagados e estilizados-->
+<!--Ngif não funcionam ainda-->
+<div *ngIf="error == false">
+    <p>Cidade: {{cidade}}</p>
+    <p>Temperatura Atual: {{temperatura?.temp}}</p>
+    <p>Temperatura Minima: {{temperatura?.temp_min}}</p>
+    <p>Temperatura Maxima: {{temperatura?.temp_max}}</p>
+    <p>Humidade Atual: {{temperatura?.humidity}}%</p>
+    <p>Tempo: {{tempo?.description}}</p>
+</div>
+<div *ngIf="error == true">
+    <p>Cidade não encontrada!</p>
+</div>

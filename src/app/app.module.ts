@@ -8,6 +8,8 @@ import { CardComponent } from './views/card/card.component';
 import { ClimaService } from './services/clima.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { eventEmitter } from './services/eventEmitter.service';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [ClimaService],
+  providers: [ClimaService, eventEmitter],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
