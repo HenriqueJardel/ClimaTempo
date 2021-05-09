@@ -11,7 +11,7 @@ export class ClimaService {
     }
     
     findbyName (name : String) : Observable<any> {
-        return this.http.get(`${API_CONFIG.baseUrl}q=${name},BR&appid=${API_CONFIG.key}&units=metric&lang=pt_br`);
+        return this.http.get(`${API_CONFIG.baseUrl}q=${name}&appid=${API_CONFIG.key}&units=metric&lang=pt_br`);
     }
 
     findbyCoordinates(latitude : number , longitude : number) : Observable<any> {

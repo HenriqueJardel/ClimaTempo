@@ -29,8 +29,10 @@ export class CardComponent implements OnInit {
   nasceMinuto : number;
   sePoeHora : number;
   sePoeMinuto : number;
+  periodo : number;
   
   ngOnInit(): void {
+    
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(pos => {
           this.climaService.findbyCoordinates(pos.coords.latitude, pos.coords.longitude).subscribe(response => {
@@ -51,11 +53,13 @@ export class CardComponent implements OnInit {
 
           this.setEnable(1);
         });
+      }, error => {
+          if(error.code) {
+            this.setEnable(0);
+          }
       });
     }
-    else {
-      this.setEnable(0);
-    }
+    
     
     this.emitter.emitEvent.subscribe(response => {
       this.climaService.findbyName(response).subscribe(response => {
@@ -69,13 +73,15 @@ export class CardComponent implements OnInit {
         this.minutos = date.getMinutes();
         this.setEnable(1);
       },error => {
-        this.setEnable(0);
+          this.setEnable(0);
       })
     });
 
     let date = new Date();
     this.hora = date.getHours();
     this.minutos = date.getMinutes();
+
+    this.periodo = (this.hora) < 18 ? 0 : 1;
   }
 
   setEnable(num : number) {
@@ -90,11 +96,27 @@ export class CardComponent implements OnInit {
   }
 
   setImage() {
-    if (this.tempo === 'céu limpo')
-      return 0;
-    else if (this.tempo === 'nublado')
-      return 1;
-    else 
-      return 2
+    if (this.periodo === 0) {
+      if (this.tempo === 'céu limpo')
+        return 0;
+      else if (this.tempo === 'nublado')
+        return 1;
+      else 
+        return 2;
+    }
+    else {
+      if (this.tempo === 'céu limpo')
+        return 3;
+      else if (this.tempo === 'nublado')
+        return 4;
+      else 
+        return 5;
+    }
+  }
+
+  toInt(num : number) {
+    if (num != undefined) {
+        return Math.floor(num);
+    }
   }
 }

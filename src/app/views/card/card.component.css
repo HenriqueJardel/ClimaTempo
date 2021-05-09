@@ -122,6 +122,10 @@
     margin-right: auto;
 }
 
+#Cidade {
+    display: none;
+}
+
 #noCidade {
     display: none;
     color: #424242f1;

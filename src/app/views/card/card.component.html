@@ -20,10 +20,13 @@
         <div class="card">
             <div class="bloco3">
                 <div class="img_temp_num">
-                    <img class="icon_temp" *ngIf="setImage() == 0" src="../../../assets/icons/icons_temps/icon-lua.png" alt="icon_tempo"/>
-                    <img class="icon_temp" *ngIf="setImage() == 1" src="../../../assets/icons/icons_temps/icon-noite-nuvens.png" alt="icon_tempo"/>
-                    <img class="icon_temp" *ngIf="setImage() == 2" src="../../../assets/icons/icons_temps/icon-noite-nuvens.png" alt="icon_tempo"/>
-                    <h1>{{temperatura?.temp}}°</h1>
+                    <img class="icon_temp" *ngIf="setImage() === 0" src="../../../assets/icons/icons_temps/icon-sol.png" alt="icon_tempo"/>
+                    <img class="icon_temp" *ngIf="setImage() === 1" src="../../../assets/icons/icons_temps/icon-sol-nuvens.png" alt="icon_tempo"/>
+                    <img class="icon_temp" *ngIf="setImage() === 2" src="../../../assets/icons/icons_temps/icon-sol-nuvens.png" alt="icon_tempo"/>
+                    <img class="icon_temp" *ngIf="setImage() === 3" src="../../../assets/icons/icons_temps/icon-lua.png" alt="icon_tempo"/>
+                    <img class="icon_temp" *ngIf="setImage() === 4" src="../../../assets/icons/icons_temps/icon-noite-nuvens.png" alt="icon_tempo"/>
+                    <img class="icon_temp" *ngIf="setImage() === 5" src="../../../assets/icons/icons_temps/icon-noite-nuvens.png" alt="icon_tempo"/>
+                    <h1>{{toInt(temperatura?.temp)}}°</h1>
                 </div>
                 <div class="temp_min_max">
                     <div class="div_temp">    
@@ -31,9 +34,9 @@
                     </div>
                     <div class="min_max">
                         <img src="../../../assets/icons/icon-setaBaixo.png" alt="setaBaixo" />
-                        <span>{{temperatura?.temp_min}}°</span>
+                        <span>{{toInt(temperatura?.temp_min)}}°</span>
                         <img src="../../../assets/icons/icon-setaCima.png"alt="setaCima" />
-                        <span>{{temperatura?.temp_max}}°</span>
+                        <span>{{toInt(temperatura?.temp_max)}}°</span>
                     </div>
                 </div>
             </div>

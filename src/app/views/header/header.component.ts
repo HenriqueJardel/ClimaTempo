@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
   // Emite um evento para o card Component atualizar a cidade 
   search() {
     if(this.queryField.value.length != null) {
-      this.emitter.emit(this.queryField.value.replace(/\s+/g, ''));
+        this.emitter.emit(this.queryField.value.replace(/\s+/g, '+'));
     }
   }
 
