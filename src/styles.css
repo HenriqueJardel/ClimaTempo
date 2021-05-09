@@ -43,13 +43,20 @@
     }
 }
 
+@media (max-width: 470px) {
+    .card_2 span{
+        display: none;
+        
+    }
+}
+
 @media (max-width: 370px) {
     .logo {
         max-width: 200px;
     }
 
     .bloco1 {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         align-items: center;
     }
     #noCidade img {
@@ -61,4 +68,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+    max-width: 992px;
+    padding-top: 10px;
+    text-align: center;
 }

@@ -1,0 +1,13 @@
+<header>
+    <div class="containner_header">
+        <div class="containner_img">
+            <img class="logo" src="../../../assets/icons/logo.png" alt="logo" />
+        </div>
+        <div class="containner-buscar">
+            <form id="buscar">
+                    <input id="txtinput" placeholder="Procure por cidade" list="datalistOptions" [formControl]="queryField">
+                    <button (click)="search()"  id="btnBusca" type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+</header>

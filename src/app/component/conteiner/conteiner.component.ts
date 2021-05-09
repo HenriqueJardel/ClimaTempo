@@ -5,12 +5,12 @@ import { ClimaService } from 'src/app/services/clima.service';
 import { eventEmitter } from 'src/app/services/eventEmitter.service';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-conteiner',
+  templateUrl: './conteiner.component.html',
+  styleUrls: ['./conteiner.component.css']
 })
 
-export class CardComponent implements OnInit {
+export class ConteinerComponent implements OnInit {
 
   constructor(public climaService : ClimaService , public emitter : eventEmitter) {}
 
@@ -67,10 +67,21 @@ export class CardComponent implements OnInit {
         this.temperatura = response['main'];
         this.tempo = response.weather[0].description;
         this.vento = response['wind'];
+        this.sunrise = response['sys'].sunrise;
+        this.sunset = response['sys'].sunset;
 
         let date = new Date();
         this.hora = date.getHours();
         this.minutos = date.getMinutes();
+
+        let solNasce = new Date(this.sunrise * 1000);
+        this.nasceHora = solNasce.getHours();
+        this.nasceMinuto = solNasce.getMinutes();
+
+        let anoitecer = new Date(this.sunset * 1000);
+        this.sePoeHora = anoitecer.getHours();
+        this.sePoeMinuto = anoitecer.getMinutes();
+
         this.setEnable(1);
       },error => {
           this.setEnable(0);
@@ -101,17 +112,30 @@ export class CardComponent implements OnInit {
         return 0;
       else if (this.tempo === 'nublado')
         return 1;
-      else 
+      else if (this.tempo === 'algumas nuvens')
         return 2;
-    }
-    else {
-      if (this.tempo === 'céu limpo')
+      else if (this.tempo === 'chuva leve')
         return 3;
-      else if (this.tempo === 'nublado')
+      else if (this.tempo === 'pouca neve')
         return 4;
       else 
         return 5;
     }
+    
+    else {
+      if (this.tempo === 'céu limpo')
+        return 6;
+      else if (this.tempo === 'nublado')
+        return 7;
+      else if (this.tempo === 'algumas nuvens')
+        return 8;
+      else if (this.tempo === 'chuva leve')
+        return 9;
+      else if (this.tempo === 'pouca neve')
+        return 10;
+      else 
+        return 11;
+      }
   }
 
   toInt(num : number) {
