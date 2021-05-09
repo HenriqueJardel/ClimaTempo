@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Temperatura } from 'src/app/model/temperatura.dto';
-import { Tempo } from 'src/app/model/tempo.dto';
 import { Vento } from 'src/app/model/vento.dto';
 import { ClimaService } from 'src/app/services/clima.service';
 import { eventEmitter } from 'src/app/services/eventEmitter.service';
@@ -16,11 +15,20 @@ export class CardComponent implements OnInit {
   constructor(public climaService : ClimaService , public emitter : eventEmitter) {}
 
   cidade : String;
+  tempo : String;
   temperatura : Temperatura;
-  tempo : Tempo;
   vento : Vento;
+
+  
   hora: number;
   minutos : number;
+  
+  sunrise: number;
+  sunset : number;
+  nasceHora : number;
+  nasceMinuto : number;
+  sePoeHora : number;
+  sePoeMinuto : number;
   
   ngOnInit(): void {
     if(navigator.geolocation) {
@@ -30,6 +38,17 @@ export class CardComponent implements OnInit {
           this.temperatura = response['main'];
           this.vento = response['wind'];
           this.tempo = response.weather[0].description;
+          this.sunrise = response['sys'].sunrise;
+          this.sunset = response['sys'].sunset;
+          
+          let solNasce = new Date(this.sunrise * 1000);
+          this.nasceHora = solNasce.getHours();
+          this.nasceMinuto = solNasce.getMinutes();
+
+          let anoitecer = new Date(this.sunset * 1000);
+          this.sePoeHora = anoitecer.getHours();
+          this.sePoeMinuto = anoitecer.getMinutes();
+
           this.setEnable(1);
         });
       });
@@ -68,5 +87,14 @@ export class CardComponent implements OnInit {
       document.getElementById("noCidade").style.display = "inline";
       document.getElementById("Cidade").style.display = "none";
     }
+  }
+
+  setImage() {
+    if (this.tempo === 'céu limpo')
+      return 0;
+    else if (this.tempo === 'nublado')
+      return 1;
+    else 
+      return 2
   }
 }

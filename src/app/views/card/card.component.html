@@ -20,7 +20,9 @@
         <div class="card">
             <div class="bloco3">
                 <div class="img_temp_num">
-                    <img class="icon_temp" src="../../../assets/icons/icons_temps/icon-lua.png" alt="icon_tempo" />
+                    <img class="icon_temp" *ngIf="setImage() == 0" src="../../../assets/icons/icons_temps/icon-lua.png" alt="icon_tempo"/>
+                    <img class="icon_temp" *ngIf="setImage() == 1" src="../../../assets/icons/icons_temps/icon-noite-nuvens.png" alt="icon_tempo"/>
+                    <img class="icon_temp" *ngIf="setImage() == 2" src="../../../assets/icons/icons_temps/icon-noite-nuvens.png" alt="icon_tempo"/>
                     <h1>{{temperatura?.temp}}°</h1>
                 </div>
                 <div class="temp_min_max">
@@ -52,12 +54,12 @@
                 <div class="info">
                     <img src="../../../assets/icons/icons_temps/icon-sol.png" alt="vento" />
                     <h3>Nascer do sol</h3>
-                    <span class="num"></span>
+                    <span class="num">{{nasceHora}}:{{nasceMinuto}}</span>
                 </div>
                 <div class="info" id="noneBorder">
                     <img src="../../../assets/icons/icon-por-sol.png" alt="vento" />
                     <h3>Pôr do sol</h3>
-                    <span class="num"></span>
+                    <span class="num">{{sePoeHora}}:{{sePoeMinuto}}</span>
                 </div>
         </div>
         </div>
