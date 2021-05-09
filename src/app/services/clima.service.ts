@@ -6,14 +6,15 @@ import { Observable } from "rxjs";
 @Injectable()
 export class ClimaService {
 
-    // http para consulta ao endpoit get da API
+    
     constructor(public http : HttpClient) {
     }
     
-
-    //Realiza uma busca por nome, retorna um json contendo todo o conteudo
-    //Ainda sendo implementado
     findbyName (name : String) : Observable<any> {
-        return this.http.get(`${API_CONFIG.baseUrl}q=${name}&appid=${API_CONFIG.key}&units=metric`);
+        return this.http.get(`${API_CONFIG.baseUrl}q=${name},BR&appid=${API_CONFIG.key}&units=metric&lang=pt_br`);
+    }
+
+    findbyCoordinates(latitude : number , longitude : number) : Observable<any> {
+        return this.http.get(`${API_CONFIG.baseUrl}lat=${latitude}&lon=${longitude}&appid=${API_CONFIG.key}&units=metric&&lang=pt_br`);
     }
 }

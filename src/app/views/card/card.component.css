@@ -1,0 +1,135 @@
+/*card-Topo*/
+.card_1 {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px 4px 4px 4px;
+    padding: 15px;
+    box-shadow: rgb(189, 189, 189) 0px 2px 2px;
+}
+.bloco1 {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.bloco1 h1 {
+    color: var(--text-title);
+    margin: auto;
+}
+
+.bloco2 {
+    display: flex;
+    align-items:center;
+}
+
+.img-local {
+    max-width: 30px;
+    margin: auto;
+}
+
+.img-reload {
+    max-width: 20px;
+    margin: auto;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+/*Card_tempo*/
+
+.img_temp_num {
+    display: flex;
+    border-bottom: rgb(131, 131, 131) solid 1px;
+}
+
+.img_temp_num h1 {
+    margin: auto;
+    font-size: 8rem;
+    color: var(--text-title);
+}
+
+.icon_temp {
+    max-width: 200px;
+    margin: auto;
+}
+
+.temp_min_max {
+    display: flex;
+    padding-top: 10px;
+}
+
+.temp_min_max span {
+    font-size: 1.3rem;
+    color: var(--text-description);
+}
+
+.min_max img {
+    max-width: 25px;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.min_max {
+    display: flex;
+    margin: auto;
+}
+
+.div_temp {
+    margin: auto;
+}
+
+/*Card Infos*/
+
+.bloco4 {
+    display: block;
+    width: 100%;
+}
+
+.info img {
+    max-width: 45px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border-bottom:rgb(160, 160, 160) solid 1px;
+    height: 65px;
+}
+
+.num{
+    margin-left: auto;
+    font-size: 1rem;
+    color: var(--text-description);
+}
+
+.info h3 {
+    font-size: 1.3rem;
+}
+
+#noneBorder {
+    border: none;
+}
+
+
+/*bloco*/
+.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px 4px 4px 4px;
+    padding: 10px 20px 10px 20px;
+    box-shadow: rgb(189, 189, 189) 0px 2px 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#noCidade {
+    display: none;
+    color: #424242f1;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#noCidade img {
+    max-width: 450px;
+}

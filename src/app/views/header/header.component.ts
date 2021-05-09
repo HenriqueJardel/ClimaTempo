@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Capitais } from 'src/app/model/capitais.dto';
+import { Capitais } from 'src/app/model/capitais.arr';
 import { eventEmitter } from 'src/app/services/eventEmitter.service';
 
 

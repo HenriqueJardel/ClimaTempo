@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { eventEmitter } from './services/eventEmitter.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +24,13 @@ import { eventEmitter } from './services/eventEmitter.service';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [ClimaService, eventEmitter],
+  providers: [
+    ClimaService, 
+    eventEmitter,
+    Navigator],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

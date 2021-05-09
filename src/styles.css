@@ -1,4 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --background: #e2e2e2;
+    --header: #007cff;
+    --text-title: #3d3d3d;
+    --text-description: #585858;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 85.5%;
+    }
+    .logo {
+        width: 250px
+    }
+}
+
+@media (max-width: 590px) {
+    html {
+        font-size: 60.5%;
+    }
+    .logo {
+        width: 180px
+    }
+    .icon_temp {
+        width: 100px;
+    }
+    .img_temp_num h1 {
+        font-size: 5rem;
+    }
+    #noCidade img {
+        width: 350px;
+    }
+    .containner_header {
+        display: block !important;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 370px) {
+    .logo {
+        max-width: 200px;
+    }
+
+    .bloco1 {
+        font-size: 0.5rem;
+        align-items: center;
+    }
+    #noCidade img {
+        width: 250px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

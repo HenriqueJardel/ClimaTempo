@@ -1,7 +1,17 @@
-<form>
-    <input placeholder="Procure pela cidade" [formControl]="queryField" list="datalistOptions" type="search">
-    <datalist id="datalistOptions">
-        <option *ngFor="let sugestao of sugestoes">{{sugestao}}</option>
-    </datalist>
-    <button (click)="search()"></button>
-</form>
+<header>
+    <div class="containner_header">
+        <div class="containner_img">
+            <img class="logo" src="../../../assets/icons/logo.png" alt="logo" />
+        </div>
+        <div class="containner-buscar">
+            <form id="buscar">
+                    <input id="txtinput" [formControl]="queryField" list="datalistOptions" type="search" placeholder="Buscar outra cidade" />
+                    <datalist id="datalistOptions">
+                        <option *ngFor="let sugestao of sugestoes">{{sugestao}}</option>
+                    </datalist>
+                    <button (click)="search()"  id="btnBusca">Buscar</button>
+            </form>
+            
+        </div>
+    </div>
+</header>

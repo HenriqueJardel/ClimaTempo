@@ -1,0 +1,64 @@
+header {
+    background-color: var(--header);
+    width: 100%; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: grey 1px 2px 2px;
+    border-bottom: rgb(0, 102, 255) solid 20px;
+}
+
+.logo {
+    width: 350px;
+}
+
+.containner_header {
+    max-width: 992px;
+    display: flex;
+    margin: auto;
+    height: 100%;
+}
+
+.containner_img {
+    margin: auto;
+}
+
+.containner-buscar {
+    margin: auto;
+}
+
+#buscar{
+    background-color:#ffffff;
+    border:solid 2px #ffffff;
+    border-radius: 3px 3px 3px 3px;
+    max-width: 500px;
+    height: 40px;
+    display: flex;
+}
+  
+#txtinput{
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 1rem;
+    border: 0 none;
+    outline: 0;
+    height: 37px;
+    width: 100%;
+}
+  
+#btnBusca{
+    color: #ffffff;
+    border: none;
+    margin-left: 5px;
+    height: 36.5px;
+    border-radius: 0 3px 3px 0;
+    width: 100px;
+    font-weight: 500;
+    background: var(--header);
+    font-size: 1rem;
+}
+
+#btnBusca:hover {
+    background-color: rgb(0, 89, 255);
+}
+  
