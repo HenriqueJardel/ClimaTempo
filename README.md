@@ -11,7 +11,7 @@ A api escolhida para este projeto foi https://openweathermap.org/api que fornece
 
 ## Instalação
 
-Para instalar o projeto basta rodar os seguintes comando via terminal e navegar para http://localhost:4200:
+Para instalar o projeto basta rodar os seguintes comandos via terminal e navegar para http://localhost:4200 :
 
 * <strong>npm install<strong/>
 * <strong>ng serve<strong/>
