@@ -1,27 +1,21 @@
 # ClimaTempo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+<img src="https://github.com/HenriqueJardel/ClimaTempo/blob/master/climaTempo.png">
 
-## Development server
+## Sobre
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Projeto desenvolvido a pedido do Prof: Hudson na matéria de programação web, com o objetivo de construir um frontend para consumir dados de uma api pública.
 
-## Code scaffolding
+A api escolhida para este projeto foi https://openweathermap.org/api que fornece dados sobre o clima.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Instalação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Para instalar o projeto basta rodar os seguintes comando via terminal e navegar para http://localhost:4200:
 
-## Running unit tests
+* <strong>npm install<strong/>
+* <strong>ng serve<strong/>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tecnologias utilizadas
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<img align="center" alt="Henri-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg"><img align="center" alt="Henri-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg"><img align="center" alt="Henri-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
