@@ -19,7 +19,7 @@ Pré-requisitos:
 # clonar repositório
 git clone https://github.com/HenriqueJardel/ClimaTempo.git
 
-# entrar na pasta do projeto back end
+# entrar na pasta do projeto
 cd ClimaTempo
 
 # instalar o projeto
