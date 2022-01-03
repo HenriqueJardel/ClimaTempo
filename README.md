@@ -4,7 +4,7 @@
 
 ## Sobre
 
-Projeto desenvolvido a pedido do Prof: Hudson na matéria de programação web, com o objetivo de construir um frontend para consumir dados de uma api pública.
+Projeto desenvolvido a pedido do Prof Hudson na matéria de programação web, com o objetivo de construir um frontend para consumir dados de uma api pública.
 
 A api escolhida para este projeto foi https://openweathermap.org/api que fornece dados sobre o clima.
 
