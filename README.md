@@ -25,6 +25,9 @@ cd ClimaTempo
 # instalar o projeto
 npm install
 
+# Executar o projeto
+npm start
+
 # navegar
 navegar para https://localhost:4200/
 ```
