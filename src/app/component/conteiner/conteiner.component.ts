@@ -19,7 +19,6 @@ export class ConteinerComponent implements OnInit {
   temperatura : Temperatura;
   vento : Vento;
 
-  
   hora: number;
   minutos : number;
   
@@ -106,36 +105,13 @@ export class ConteinerComponent implements OnInit {
     }
   }
 
-  setImage() {
-    if (this.periodo === 0) {
-      if (this.tempo === 'céu limpo')
-        return 0;
-      else if (this.tempo === 'nublado')
-        return 1;
-      else if (this.tempo === 'algumas nuvens')
-        return 2;
-      else if (this.tempo === 'chuva leve')
-        return 3;
-      else if (this.tempo === 'pouca neve')
-        return 4;
-      else 
-        return 5;
+  getImageSrc() {
+    if(this.periodo === 0) {
+      return "assets/icons/icons_temps/" + this.tempo + ".png"
     }
-    
     else {
-      if (this.tempo === 'céu limpo')
-        return 6;
-      else if (this.tempo === 'nublado')
-        return 7;
-      else if (this.tempo === 'algumas nuvens')
-        return 8;
-      else if (this.tempo === 'chuva leve')
-        return 9;
-      else if (this.tempo === 'pouca neve')
-        return 10;
-      else 
-        return 11;
-      }
+      return "assets/icons/icons_temps/" + this.tempo + "-noite.png"
+    }
   }
 
   toInt(num : number) {

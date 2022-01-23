@@ -102,6 +102,12 @@
           "options": {
             "browserTarget": "ClimaTempo:build"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/ClimaTempo/"
+          }
         }
       }
     }
