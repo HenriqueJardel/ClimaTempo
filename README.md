@@ -31,8 +31,12 @@ npm start
 # navegar
 navegar para https://localhost:4200/
 ```
-
+<p align="center">ou</p>
   
+```bash
+#Acesse a página 
+https://henriquejardel.github.io/ClimaTempo/
+```
 ## Tecnologias utilizadas
 <div style="display: inline_block;">
   <img align="center" alt="Henri-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
